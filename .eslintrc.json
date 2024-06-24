@@ -1,5 +1,5 @@
 {
-	"extends": ["next/core-web-vitals", "next", "prettier"],
+	"extends": ["next/core-web-vitals", "next", "prettier", "@feature-sliced"],
 	"rules": {
 		"@typescript-eslint/no-empty-function": ["off"],
 		"@typescript-eslint/interface-name-prefix": "off",
