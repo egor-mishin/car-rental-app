@@ -7,7 +7,7 @@
 -✔️ Storybook
 -✔️ FSD architecture
 
-* First item
+* ✔️ First item
 * Second item
 * Third item
 * Fourth item
