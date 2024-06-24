@@ -1,4 +1,3 @@
-## Getting Started
+## Demo
 
-
-## Learn More
+## Technologies
