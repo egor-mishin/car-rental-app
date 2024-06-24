@@ -1,7 +1,7 @@
 ## ↗️Demo
 
-## Technologies
-✔️-React / Nextjs.
+## Technologies 
+✔️ React / Nextjs.
 ✔️ Zustand.
 ✔️ TypeScript.
 ✔️ Storybook.
