@@ -1,5 +1,11 @@
 {
-	"extends": ["next/core-web-vitals", "next", "prettier", "@feature-sliced"],
+	"extends": [
+		"next/core-web-vitals",
+		"next",
+		"prettier",
+		"@feature-sliced",
+		"plugin:storybook/recommended"
+	],
 	"rules": {
 		"@typescript-eslint/no-empty-function": ["off"],
 		"@typescript-eslint/interface-name-prefix": "off",
