@@ -1,0 +1,28 @@
+$colors: (
+	'primary': (
+		'base': #3563e9,
+		'dark': #1a37a7,
+		'light': #658df1,
+	),
+	'secondary': (
+		'base': #1a202c,
+		'dark': #0d121f,
+		'light': #596780,
+	),
+	'success': (
+		'base': #9cd323,
+		'dark': #7fb519,
+		'light': #bce455,
+	),
+	'error': (
+		'base': #db2719,
+	),
+	'warnings': (
+		'base': #ffc73a,
+	),
+	'info': (
+		'base': #54a6ff,
+	),
+);
+
+// use get-map($colors, primary, base)
