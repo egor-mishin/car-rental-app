@@ -1,3 +1,9 @@
 .button {
-	color: red;
+	padding: 9px 16px;
+	background: transparent;
+	border: none;
+}
+
+.primary {
+	background-color: var(--color-primary-base);
 }

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../../../shared/styles/main.scss';
 
-const inter = Inter({ subsets: ['latin'] });
+import '../../../shared/styles/globals.scss';
+import { plusJakartaSansRegular } from '../fonts/fonts';
 
 export const metadata: Metadata = {
 	title: 'Car Rental App',
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={plusJakartaSansRegular.className}>{children}</body>
 		</html>
 	);
 }
