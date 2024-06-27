@@ -20,7 +20,6 @@
 			"next lint --file"
 		],
 		"*.{css,scss}": [
-			"prettier --write",
 			"stylelint --fix"
 		]
 	},

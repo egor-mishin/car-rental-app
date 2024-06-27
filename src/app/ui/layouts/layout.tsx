@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import '../../../shared/styles/globals.scss';
+import '../../../shared/styles/main.scss';
 import { plusJakartaSansRegular } from '../fonts/fonts';
 
 export const metadata: Metadata = {

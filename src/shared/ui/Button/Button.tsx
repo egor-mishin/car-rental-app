@@ -6,9 +6,10 @@ export const Button = ({
 	children,
 	appearance,
 	className,
-	size,
-	title,
+	size = 'medium',
+	title = 'button',
 	icon,
+	kind = 'label',
 	...props
 }: ButtonProps): JSX.Element => {
 	return (
@@ -23,7 +24,7 @@ export const Button = ({
 				[styles.small]: size === 'small',
 			})}
 		>
-			{title}
+			{kind === 'icon-only' ? icon : icon ? `${icon} ${title}` : title}
 		</button>
 	);
 };

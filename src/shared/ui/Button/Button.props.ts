@@ -7,5 +7,5 @@ export interface ButtonProps
 	size: 'large' | 'medium' | 'small';
 	className?: string;
 	icon?: ReactNode;
-	title: string;
+	title?: string;
 }
