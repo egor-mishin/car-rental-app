@@ -1,13 +1,14 @@
 import cn from 'classnames';
-import { FC } from 'react';
-import { ButtonProps } from './Button.props';
 import styles from './Button.module.scss';
+import { ButtonProps } from './Button.props';
 
 export const Button = ({
 	children,
 	appearance,
 	className,
 	size,
+	title,
+	icon,
 	...props
 }: ButtonProps): JSX.Element => {
 	return (
@@ -22,7 +23,7 @@ export const Button = ({
 				[styles.small]: size === 'small',
 			})}
 		>
-			{children}
+			{title}
 		</button>
 	);
 };
