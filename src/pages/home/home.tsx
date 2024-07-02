@@ -2,7 +2,7 @@ import { Button } from '@/shared/ui/Button/Button';
 import { FavButton } from '@/shared/ui/FavButton/FavButton';
 import { Price } from '@/shared/ui/Price/Price';
 import { Rating } from '@/shared/ui/Rating/Rating';
-import { CURRENCY, PERIOD } from '@/shared/constants/currencies';
+import { CURRENCY, PERIOD } from '@/shared/lib/contants';
 
 export default function Home() {
 	return (

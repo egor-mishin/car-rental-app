@@ -5,8 +5,8 @@ import { PriceProps } from './Price.props';
 export const Price = ({ price, currency, period, discount, ...props }: PriceProps) => {
 	return (
 		<div {...props}>
-			<P className={styles.price} size={'s'}>
-				{`${price}/`}
+			<P className={styles.price} size="s">
+				{`${price}${currency}/`}
 				<span className={styles.period}>{period}</span>
 				<br />
 				<span className={styles.discount}>{discount && discount}</span>
