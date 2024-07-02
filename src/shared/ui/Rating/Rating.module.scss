@@ -1,0 +1,9 @@
+.rating {
+	display: grid;
+	max-width: 230px;
+	grid-auto-flow: column;
+}
+
+.filled {
+	fill: var(--color-primary-base);
+}

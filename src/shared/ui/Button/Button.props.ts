@@ -1,11 +1,15 @@
-import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface ButtonProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+	disabled?: boolean;
 	appearance: 'primary' | 'secondary' | 'minimal';
-	kind: 'label' | 'icon-left' | 'icon-right' | 'icon-only';
+	kind: 'regular' | 'icon-right' | 'icon-only' | 'with-icon';
 	size: 'large' | 'medium' | 'small';
 	className?: string;
-	icon?: ReactNode;
-	title?: string;
+	iconLabel?: string;
+	title: string;
+	name?: string;
+	testId?: string;
+	onClickFn?: () => void;
 }

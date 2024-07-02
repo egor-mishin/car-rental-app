@@ -1,20 +1,28 @@
+'use client';
 import cn from 'classnames';
 import styles from './Button.module.scss';
 import { ButtonProps } from './Button.props';
+import WeChat from '@/shared/assets/icons/wechat.svg';
 
 export const Button = ({
-	children,
 	appearance,
 	className,
 	size = 'medium',
 	title = 'button',
-	icon,
-	kind = 'label',
+	disabled,
+	kind = 'regular',
+	onClickFn,
+	iconLabel,
+	testId,
 	...props
 }: ButtonProps): JSX.Element => {
+	const SVGIcon = iconLabel === 'wechat' && <WeChat />;
+
 	return (
 		<button
-			{...props}
+			onClick={onClickFn}
+			disabled={disabled}
+			data-testid={testId}
 			className={cn(styles.button, className, {
 				[styles.primary]: appearance === 'primary',
 				[styles.secondary]: appearance === 'secondary',
@@ -22,9 +30,22 @@ export const Button = ({
 				[styles.large]: size === 'large',
 				[styles.medium]: size === 'medium',
 				[styles.small]: size === 'small',
+				[styles.withIcon]: iconLabel,
+				[styles.iconRight]: kind === 'icon-right',
 			})}
+			{...props}
 		>
-			{kind === 'icon-only' ? icon : icon ? `${icon} ${title}` : title}
+			<>
+				{iconLabel && kind !== 'icon-only' ? (
+					<>
+						{SVGIcon} {title}
+					</>
+				) : kind === 'icon-only' ? (
+					SVGIcon
+				) : (
+					title
+				)}
+			</>
 		</button>
 	);
 };

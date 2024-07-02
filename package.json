@@ -31,6 +31,7 @@
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.5.0",
 		"@feature-sliced/eslint-config": "^0.1.1",
+		"@newhighsco/storybook-addon-svgr": "^2.0.20",
 		"@storybook/addon-essentials": "^8.1.10",
 		"@storybook/addon-interactions": "^8.1.10",
 		"@storybook/addon-links": "^8.1.10",
@@ -38,7 +39,9 @@
 		"@storybook/blocks": "^8.1.10",
 		"@storybook/nextjs": "^8.1.10",
 		"@storybook/react": "^8.1.10",
+		"@storybook/react-webpack5": "^8.1.10",
 		"@storybook/test": "^8.1.10",
+		"@svgr/webpack": "^8.1.0",
 		"@types/lint-staged": "^13.3.0",
 		"@types/node": "^20",
 		"@types/react": "^18",

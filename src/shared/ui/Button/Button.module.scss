@@ -2,8 +2,110 @@
 	padding: 9px 16px;
 	background: transparent;
 	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: var(--font-weigh-sm);
+
+	&:disabled {
+		opacity: 0.5;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.small {
+	font-size: var(--font-size-xs);
+
+	svg {
+		width: 12px;
+		height: 12px;
+	}
+}
+
+.medium {
+	font-size: var(--font-size-sm);
+
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+}
+
+.large {
+	width: 109px;
+	height: 50px;
+	font-size: var(--font-size-lg);
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.with-icon {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.icon-right {
+	direction: rtl;
 }
 
 .primary {
 	background-color: var(--color-primary-base);
+	color: var(--font-color-btn-primary);
+
+	:hover {
+		background-color: var(--color-primary-dark);
+	}
+
+	:focus {
+		background-color: var(--color-primary-dark);
+	}
+}
+
+.minimal {
+	background: transparent;
+	color: var(--font-color-btn-secondary);
+	opacity: 0.8;
+
+	svg path {
+		fill: var(--color-secondary-base);
+	}
+
+	:focus {
+		opacity: 1;
+		border: 1px solid var(--color-secondary-light);
+	}
+
+	:hover {
+		opacity: 1;
+		background-color: var(--color-secondary-light);
+	}
+
+	:disabled {
+		opacity: 0.4;
+	}
+}
+
+.secondary {
+	background: transparent;
+	color: var(--font-color-btn-secondary);
+	border: 1px solid var(--color-secondary-base);
+
+	svg path {
+		fill: var(--color-secondary-base);
+	}
+
+	:focus {
+		opacity: 0.5;
+	}
+
+	:disabled {
+		opacity: 0.3;
+	}
 }

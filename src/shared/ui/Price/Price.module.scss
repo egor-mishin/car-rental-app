@@ -1,0 +1,15 @@
+.price {
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weigh-b);
+}
+
+.period {
+	color: var(--color-secondary-light);
+	font-size: var(--font-size-md);
+}
+
+.discount {
+	text-decoration: line-through;
+	font-size: var(--font-size-md);
+	color: var(--color-secondary-light);
+}
