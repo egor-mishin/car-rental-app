@@ -1,11 +1,9 @@
 'use client';
-import HeadingSymbol from '@/public/icons/heading-symbol.svg';
 import cn from 'classnames';
-import { FC } from 'react';
 import styles from './Htag.module.scss';
 import { HtagProps } from './Htag.props';
 
-export const Htag = ({ children, tag = 'h3', ...props }): JSX.Element => {
+export const Htag = ({ children, tag = 'h3', ...props }: HtagProps): JSX.Element => {
 	const getHeading = () => {
 		switch (tag) {
 			case 'h1':

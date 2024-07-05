@@ -6,10 +6,10 @@ export const Price = ({ price, currency, period, discount, ...props }: PriceProp
 	return (
 		<div {...props}>
 			<P className={styles.price} size="s">
-				{`${price}${currency}/`}
+				{`${currency} ${price} / `}
 				<span className={styles.period}>{period}</span>
 				<br />
-				<span className={styles.discount}>{discount && discount}</span>
+				<span className={styles.discount}>{discount && `${currency} ${discount}`}</span>
 			</P>
 		</div>
 	);

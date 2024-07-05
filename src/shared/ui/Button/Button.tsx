@@ -2,7 +2,8 @@
 import cn from 'classnames';
 import styles from './Button.module.scss';
 import { ButtonProps } from './Button.props';
-import WeChat from '@/shared/assets/icons/wechat.svg';
+import { getIcon } from '@/shared/lib/getIcon';
+import Link from 'next/link';
 
 export const Button = ({
 	appearance,
@@ -10,15 +11,44 @@ export const Button = ({
 	size = 'medium',
 	title = 'button',
 	disabled,
+	route,
 	kind = 'regular',
 	onClickFn,
-	iconLabel,
+	iconSymbol,
 	testId,
 	...props
 }: ButtonProps): JSX.Element => {
-	const SVGIcon = iconLabel === 'wechat' && <WeChat />;
+	const svgIcon = iconSymbol ? getIcon(iconSymbol) : null;
 
-	return (
+	return route ? (
+		<Link
+			href={route}
+			data-testid={testId}
+			className={cn(styles.button, className, {
+				[styles.primary]: appearance === 'primary',
+				[styles.secondary]: appearance === 'secondary',
+				[styles.minimal]: appearance === 'minimal',
+				[styles.large]: size === 'large',
+				[styles.medium]: size === 'medium',
+				[styles.small]: size === 'small',
+				[styles.withIcon]: iconSymbol,
+				[styles.iconRight]: kind === 'icon-right',
+			})}
+			{...props}
+		>
+			<>
+				{iconSymbol && kind !== 'icon-only' ? (
+					<>
+						{svgIcon} {title}
+					</>
+				) : kind === 'icon-only' ? (
+					svgIcon
+				) : (
+					title
+				)}
+			</>
+		</Link>
+	) : (
 		<button
 			onClick={onClickFn}
 			disabled={disabled}
@@ -30,18 +60,18 @@ export const Button = ({
 				[styles.large]: size === 'large',
 				[styles.medium]: size === 'medium',
 				[styles.small]: size === 'small',
-				[styles.withIcon]: iconLabel,
+				[styles.withIcon]: iconSymbol,
 				[styles.iconRight]: kind === 'icon-right',
 			})}
 			{...props}
 		>
 			<>
-				{iconLabel && kind !== 'icon-only' ? (
+				{iconSymbol && kind !== 'icon-only' ? (
 					<>
-						{SVGIcon} {title}
+						{svgIcon} {title}
 					</>
 				) : kind === 'icon-only' ? (
-					SVGIcon
+					svgIcon
 				) : (
 					title
 				)}

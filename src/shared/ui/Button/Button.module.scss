@@ -5,6 +5,7 @@
 	cursor: pointer;
 	border-radius: 5px;
 	font-weight: var(--font-weigh-sm);
+	text-decoration: none;
 
 	&:disabled {
 		opacity: 0.5;
@@ -17,30 +18,31 @@
 
 .small {
 	font-size: var(--font-size-xs);
+	min-width: 90px;
 
 	svg {
-		width: 12px;
-		height: 12px;
+		max-width: 12px;
+		max-height: 12px;
 	}
 }
 
 .medium {
 	font-size: var(--font-size-sm);
+	min-width: 100px;
 
 	svg {
-		width: 14px;
-		height: 14px;
+		max-width: 14px;
+		max-height: 14px;
 	}
 }
 
 .large {
-	width: 109px;
-	height: 50px;
+	min-width: 120px;
 	font-size: var(--font-size-lg);
 
 	svg {
-		width: 20px;
-		height: 20px;
+		max-width: 20px;
+		max-height: 20px;
 	}
 }
 

@@ -1,0 +1,22 @@
+.wrapper {
+	position: relative;
+}
+
+.searchInput {
+	width: 490px;
+	height: 45px;
+	padding: 10px 50px;
+	display: block;
+	border: 1px solid var(--color-secondary-light);
+	color: var(--color-secondary-dark);
+	border-radius: 70px;
+	outline: none;
+}
+
+.searchIcon {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	z-index: 1;
+}
