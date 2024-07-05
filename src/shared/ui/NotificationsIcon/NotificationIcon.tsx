@@ -1,10 +1,18 @@
-import SVGIcon from '../../assets/icons/notification-icon.svg';
+import { ICONS } from '@/shared/lib/constants';
+import { CustomLink } from '../Link/CustomLink';
+import styles from './NotificationIcon.module.scss';
+import { NotificationIconProps } from './NotificationIcon.props';
 
-export const NotificationIcon = ({ notificationsAmount }) => {
+export const NotificationIcon = ({ notificationsAmount }: NotificationIconProps) => {
 	return (
-		<div className={stlyles.notificationIcon}>
+		<div className={styles.notificationIcon}>
 			<span className={styles.amount}>{notificationsAmount}</span>
-			<SVGIcon />
+			<CustomLink
+				url="/favorites"
+				appearance="icon-only"
+				iconSymbol={ICONS.NOTIFICATION}
+				title="favorites"
+			/>
 		</div>
 	);
 };

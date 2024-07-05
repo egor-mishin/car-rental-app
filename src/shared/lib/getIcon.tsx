@@ -6,6 +6,7 @@ import NotificationIcon from '../assets/icons/notification-icon.svg';
 import ProfileIcon from '../assets/icons/profile-2user.svg';
 import SearchIcon from '../assets/icons/search-icon.svg';
 import SettingsIcon from '../assets/icons/settings-icon.svg';
+import AvatarIcon from '../assets/icons/avatar.svg';
 import { ICONS } from './constants';
 
 export const getIcon = (iconSymbol?: string) => {
@@ -33,6 +34,9 @@ export const getIcon = (iconSymbol?: string) => {
 
 		case ICONS.NOTIFICATION:
 			return <NotificationIcon />;
+
+		case ICONS.AVATAR:
+			return <AvatarIcon />;
 
 		default:
 			return null;

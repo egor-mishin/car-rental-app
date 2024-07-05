@@ -1,0 +1,14 @@
+.notificationIcon {
+	position: relative;
+}
+
+.amount {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	padding: 3px 6px;
+	background-color: var(--color-red);
+	color: var(--color-white);
+	border-radius: 50%;
+	font-size: var(--font-size-xs);
+}

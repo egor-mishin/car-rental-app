@@ -3,7 +3,10 @@ import styles from './authPanel.module.scss';
 import { CustomLink } from '@/shared/ui/Link/CustomLink';
 import { ICONS } from '@/shared/lib/constants';
 import { ROUTES } from '@/shared/lib/routes';
-export const AuthPanel = ({ isAuthenticated }) => {
+import { AuthPanelProps } from './authPanel.props';
+import { NotificationIcon } from '@/shared/ui/NotificationsIcon/NotificationIcon';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+export const AuthPanel = ({ isAuthenticated }: AuthPanelProps) => {
 	if (isAuthenticated) {
 		return (
 			<div className={styles.authPanel}>
@@ -28,23 +31,19 @@ export const AuthPanel = ({ isAuthenticated }) => {
 	return (
 		<div className={styles.authPanel}>
 			<CustomLink
-				url="/favorites"
+				url="user/favorites"
 				appearance="icon-only"
 				iconSymbol={ICONS.LIKE_BLACK}
 				title="favorites"
 			/>
+			<NotificationIcon notificationsAmount={5} />
 			<CustomLink
-				url="/favorites"
-				appearance="icon-only"
-				iconSymbol={ICONS.NOTIFICATION}
-				title="favorites"
-			/>
-			<CustomLink
-				url="/favorites"
+				url="user/settings"
 				appearance="icon-only"
 				iconSymbol={ICONS.SETTINGS}
 				title="favorites"
 			/>
+			<Avatar />
 		</div>
 	);
 };

@@ -19,4 +19,5 @@ export const ICONS = {
 	LIKE_BLACK: 'like-black',
 	SETTINGS: 'settings',
 	NOTIFICATION: 'notification',
+	AVATAR: 'avatar',
 };

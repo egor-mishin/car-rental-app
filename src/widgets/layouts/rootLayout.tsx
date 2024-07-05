@@ -17,11 +17,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={plusJakartaSansRegular.className}>
+				<Header />
 				<div className="container">
-					<Header />
 					<div className="main">{children}</div>
-					<Footer />
 				</div>
+				<Footer />
 			</body>
 		</html>
 	);

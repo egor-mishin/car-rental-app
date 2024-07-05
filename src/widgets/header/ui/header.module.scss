@@ -1,6 +1,10 @@
 .header {
+	padding: 40px 0;
+	background-color: var(--color-white);
+}
+
+.wrapper {
 	display: grid;
 	grid-auto-flow: column;
 	justify-content: space-between;
-	margin: 40px 0;
 }
