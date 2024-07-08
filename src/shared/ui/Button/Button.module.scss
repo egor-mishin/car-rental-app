@@ -1,5 +1,5 @@
 .button {
-	padding: 9px 16px;
+	padding: 12px 16px;
 	background: transparent;
 	border: none;
 	cursor: pointer;
@@ -67,6 +67,10 @@
 
 	:focus {
 		background-color: var(--color-primary-dark);
+	}
+
+	&_light {
+		background-color: var(--color-primary-light);
 	}
 }
 

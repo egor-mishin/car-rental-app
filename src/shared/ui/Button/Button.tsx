@@ -26,6 +26,7 @@ export const Button = ({
 			data-testid={testId}
 			className={cn(styles.button, className, {
 				[styles.primary]: appearance === 'primary',
+				[styles.primary_light]: appearance === 'primary-light',
 				[styles.secondary]: appearance === 'secondary',
 				[styles.minimal]: appearance === 'minimal',
 				[styles.large]: size === 'large',

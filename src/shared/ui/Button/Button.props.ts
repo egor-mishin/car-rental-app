@@ -6,7 +6,7 @@ export interface ButtonProps
 		HTMLAnchorElement & HTMLButtonElement
 	> {
 	disabled?: boolean;
-	appearance: 'primary' | 'secondary' | 'minimal';
+	appearance: 'primary' | 'primary-light' | 'secondary' | 'minimal';
 	kind: 'regular' | 'icon-right' | 'icon-only' | 'with-icon';
 	size: 'large' | 'medium' | 'small';
 	className?: string;

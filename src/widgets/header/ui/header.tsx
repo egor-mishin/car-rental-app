@@ -1,6 +1,5 @@
-import { SearchInput } from '@/shared/ui/inputs/search/Search';
-import { Logo } from '@/shared/ui/Logo/Logo';
-import { AuthPanel } from './authPanel/authPanel';
+import { AuthPanel } from '../';
+import { Logo, SearchInput } from '@/shared/ui';
 import styles from './header.module.scss';
 
 export const Header = () => {

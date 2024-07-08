@@ -1,7 +1,7 @@
 'use client';
 import { ReactNode, useEffect, useState } from 'react';
 import Star from '../../assets/icons/star.svg';
-import { RatingProps } from './Rating.interface';
+import { RatingProps } from './Rating.props';
 import styles from './Rating.module.scss';
 import cn from 'classnames';
 

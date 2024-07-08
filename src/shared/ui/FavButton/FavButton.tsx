@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import FavIcon from '../../assets/icons/favIcon.svg';
+import FavIcon from '@/shared/assets/icons/like.svg';
 import styles from './FavButton.module.scss';
 
 export const FavButton = ({ isFavorite }: { isFavorite?: boolean }) => {

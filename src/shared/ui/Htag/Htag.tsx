@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styles from './Htag.module.scss';
 import { HtagProps } from './Htag.props';
 
-export const Htag = ({ children, tag = 'h3', ...props }: HtagProps): JSX.Element => {
+export const Htag = ({ children, tag = 'h3', kind, ...props }: HtagProps): JSX.Element => {
 	const getHeading = () => {
 		switch (tag) {
 			case 'h1':
@@ -11,6 +11,7 @@ export const Htag = ({ children, tag = 'h3', ...props }: HtagProps): JSX.Element
 					<h1
 						className={cn(styles.heading, {
 							[styles.h1]: tag === 'h1',
+							[styles.white]: kind === 'white',
 						})}
 						{...props}
 					>
@@ -22,6 +23,7 @@ export const Htag = ({ children, tag = 'h3', ...props }: HtagProps): JSX.Element
 					<h2
 						className={cn(styles.heading, {
 							[styles.h2]: tag === 'h2',
+							[styles.white]: kind === 'white',
 						})}
 						{...props}
 					>

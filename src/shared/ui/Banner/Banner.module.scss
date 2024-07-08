@@ -1,0 +1,36 @@
+.banner {
+	position: relative;
+	display: grid;
+	grid-auto-flow: column;
+	width: 640px;
+	height: 360px;
+	padding: 24px;
+	z-index: -5;
+
+	p {
+		line-height: 170%;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	h2 {
+		line-height: 170%;
+		width: 200px;
+	}
+}
+
+.bgImg {
+	z-index: -5;
+}
+
+.content {
+	width: 300px;
+}
+
+.imageContainer {
+	width: 340px;
+	height: 108px;
+	margin-top: 180px;
+	right: 150px;
+	position: relative;
+}
