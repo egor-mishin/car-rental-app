@@ -1,12 +1,12 @@
-import Car from '../assets/icons/car.svg';
+import AvatarIcon from '../assets/icons/avatar.svg';
+import Transmission from '../assets/icons/car.svg';
 import GasStation from '../assets/icons/gas-station.svg';
 import LikeIconBlack from '../assets/icons/like-black.svg';
 import LikeIcon from '../assets/icons/like.svg';
 import NotificationIcon from '../assets/icons/notification-icon.svg';
-import ProfileIcon from '../assets/icons/profile-2user.svg';
+import Capacity from '../assets/icons/profile-2user.svg';
 import SearchIcon from '../assets/icons/search-icon.svg';
 import SettingsIcon from '../assets/icons/settings-icon.svg';
-import AvatarIcon from '../assets/icons/avatar.svg';
 import { ICONS } from './constants';
 
 export const getIcon = (iconSymbol?: string) => {
@@ -14,11 +14,11 @@ export const getIcon = (iconSymbol?: string) => {
 		case ICONS.GAS:
 			return <GasStation />;
 
-		case ICONS.CAR:
-			return <Car />;
+		case ICONS.TRANSMISSION:
+			return <Transmission />;
 
-		case ICONS.PROFILE:
-			return <ProfileIcon />;
+		case ICONS.CAPACITY:
+			return <Capacity />;
 
 		case ICONS.SEARCH:
 			return <SearchIcon />;

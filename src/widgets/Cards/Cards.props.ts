@@ -1,9 +1,8 @@
+import { ICar } from '@/shared/interfaces/car.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export interface PriceProps
+export interface CardsProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	price: number;
-	period: string;
-	discount?: string;
-	currency: string;
+	title: string;
+	cars: ICar[];
 }

@@ -1,3 +1,39 @@
 .card {
-	position: static;
+	max-width: 317px;
+	max-height: 388px;
+	background-color: var(--color-white);
+	border-radius: 15px;
+	padding: 25px;
+}
+
+.imageContainer {
+	width: 205px;
+	height: 75px;
+	position: relative;
+	margin: 40px auto;
+}
+
+.subtitle {
+	display: block;
+	color: var(--color-secondary-light);
+	font-size: var(--font-size-md);
+	margin-top: 10px;
+}
+
+.header {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: space-between;
+}
+
+.footer {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: space-between;
+}
+
+.spec {
+	display: grid;
+	grid-auto-flow: column;
+	margin: 40px 0 45px;
 }

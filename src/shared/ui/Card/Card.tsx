@@ -1,7 +1,10 @@
-import Image from 'next/image';
-import { Item } from '../Item/Item';
+'use client';
+import { CURRENCY } from '@/shared/lib/constants';
+import { CldImage } from 'next-cloudinary';
 import { Button } from '../Button/Button';
+import { FavButton } from '../FavButton/FavButton';
 import { Htag } from '../Htag/Htag';
+import { Item } from '../Item/Item';
 import { Price } from '../Price/Price';
 import styles from './Card.module.scss';
 import { CardProps } from './Card.props';
@@ -15,6 +18,7 @@ export const Card = ({
 	slug,
 	period,
 	currency,
+	discount,
 }: CardProps) => {
 	return (
 		<div className={styles.card}>
@@ -23,14 +27,29 @@ export const Card = ({
 					{title}
 					<span className={styles.subtitle}>{subtitle}</span>
 				</Htag>
+				<FavButton />
 			</div>
-			<Image src={imageUrl} alt={title} />
-			{specs.map((spec) => (
-				<Item title={spec.title} iconSymbol={spec.iconSymbol} />
-			))}
+			<div className={styles.imageContainer}>
+				<CldImage src={imageUrl} alt={title} fill />
+			</div>
+			<div className={styles.spec}>
+				{specs &&
+					specs.map((spec) => (
+						<Item
+							title={Object.values(spec).toString()}
+							iconSymbol={Object.keys(spec).toString()}
+						/>
+					))}
+			</div>
 			<div className={styles.footer}>
-				<Price price={price} period={period} currency={currency} />
-				<Button appearance={'primary'} kind="regular" size="large" title="More details" />
+				<Price price={price} period={period} currency={CURRENCY.USD} discount={discount} />
+				<Button
+					route={slug}
+					appearance={'primary'}
+					kind="regular"
+					size="large"
+					title="More details"
+				/>
 			</div>
 		</div>
 	);

@@ -1,3 +1,4 @@
+import { ISpec } from '@/shared/interfaces/car.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface CardProps
@@ -5,9 +6,10 @@ export interface CardProps
 	title: string;
 	subtitle: string;
 	imageUrl: string;
-	specs: string[];
-	price: string;
+	specs: ISpec[];
+	price: number;
+	discount?: number;
 	slug: string;
 	period: string;
-	currency: string;
+	currency?: string;
 }

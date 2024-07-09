@@ -1,162 +1,81 @@
-export const cars = [
+import { ICar } from '@/shared/interfaces/car.interface';
+import { v4 as uuidv4 } from 'uuid';
+
+export const cars: ICar[] = [
 	{
-		id: 1,
+		id: uuidv4(),
 		model: 'Koenigsegg',
 		type: 'Sport',
-		price: 99.0,
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Auto',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		image: '/images/toyota-camry.jpg',
+		specs: [{ gas: '80L' }, { transmission: 'Manual' }, { capacity: '2 people' }],
+		price: 85.0,
+		imageUrl: 'car_3_mxwumk',
 	},
 
 	{
-		id: 2,
+		id: uuidv4(),
 		model: 'Nissan GT - R',
 		type: 'Sport',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		price: 99.0,
-		image: '/images/toyota-camry.jpg',
+		specs: [{ gas: '80L' }, { transmission: 'Electric' }, { capacity: '2 people' }],
+		price: 90.0,
+		imageUrl: 'car_3-1_jpssoc',
 	},
 
 	{
-		id: 3,
-		type: 'Sedan',
+		id: uuidv4(),
 		model: 'Rolls - Royce',
-		specs: [
-			{
-				gas: 70,
-				transmission: 'Manual',
-				capacity: 4,
-			},
-		],
-		discount: 10,
-		price: 80.0,
-		image: '/images/toyota-camry.jpg',
+		type: 'Sedan',
+		specs: [{ gas: '70L' }, { transmission: 'Manual' }, { capacity: '4 people' }],
+		price: 78.0,
+		imageUrl: 'car_quoudc',
 	},
 
 	{
-		id: 4,
-		type: 'Sport',
-		model: 'Nissan GT - R',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		price: 95.0,
-		image: '/images/toyota-camry.jpg',
-	},
-
-	{
-		id: 5,
-		type: 'SUV',
+		id: uuidv4(),
 		model: 'All New Rush',
-		price: 80.0,
-		image: '/images/toyota-camry.jpg',
-	},
-
-	{
-		id: 6,
-		type: 'Suv',
-		model: 'CR  - V',
-		price: 80.0,
-		image: '/images/toyota-camry.jpg',
-	},
-
-	{
-		id: 11,
-		type: 'Hatchback',
-		model: 'MG ZX Exclusice',
-		price: 76.0,
-		image: '/images/toyota-camry.jpg',
-	},
-
-	{
-		id: 7,
 		type: 'Sport',
-		model: 'Nissan GT - R',
-		price: 95.0,
-		image: '/images/toyota-camry.jpg',
-	},
-
-	{
-		id: 8,
-		type: 'SUV',
-		model: 'All New Rush',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
+		specs: [{ gas: '70L' }, { transmission: 'Electric' }, { capacity: '6 people' }],
 		discount: 15,
-		price: 80.0,
-		image: '/images/toyota-camry.jpg',
+		price: 83.0,
+		imageUrl: 'Car_1_rzjwxm',
 	},
 
 	{
-		id: 9,
-		type: 'Suv',
+		id: uuidv4(),
 		model: 'CR  - V',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		price: 80.0,
-		image: '/images/toyota-camry.jpg',
+		type: 'SUV',
+		specs: [{ gas: '80L' }, { transmission: 'Electric' }, { capacity: '6 people' }],
+		price: 90.0,
+		imageUrl: 'Car_1-3_mntbsq',
 	},
 
 	{
-		id: 11,
-		type: 'Hatchback',
-		model: 'MG ZX Exclusice',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		price: 76.0,
-		image: '/images/toyota-camry.jpg',
+		id: uuidv4(),
+		model: 'Nissan GT - R',
+		type: 'SUV',
+		specs: [{ gas: '80L' }, { transmission: 'Electric' }, { capacity: '6 people' }],
+		discount: 115,
+		price: 99.0,
+		imageUrl: 'car_3-1_jpssoc',
 	},
 
 	{
-		id: 12,
-		type: 'Hatchback',
-		specs: [
-			{
-				gas: 80,
-				transmission: 'Manual',
-				capacity: 2,
-			},
-		],
-		discount: 15,
-		model: 'MG ZX Excite',
-		price: 74.0,
-		image: '/images/toyota-camry.jpg',
+		id: uuidv4(),
+		model: 'All New Terios',
+		type: 'SUV',
+		specs: [{ gas: '90L' }, { transmission: 'Electric' }, { capacity: '6 people' }],
+		discount: 125,
+		price: 99.0,
+		imageUrl: 'Car_1-2_yvyptg',
+	},
+
+	{
+		id: uuidv4(),
+		model: 'All New Terios',
+		type: 'SUV',
+		specs: [{ gas: '90L' }, { transmission: 'Electric' }, { capacity: '6 people' }],
+		discount: 125,
+		price: 99.0,
+		imageUrl: 'Car_1-2_yvyptg',
 	},
 ];
 

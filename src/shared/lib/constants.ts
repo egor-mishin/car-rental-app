@@ -12,6 +12,8 @@ export const PERIOD = {
 
 export const ICONS = {
 	GAS: 'gas',
+	TRANSMISSION: 'transmission',
+	CAPACITY: 'capacity',
 	PROFILE: 'profile',
 	CAR: 'car',
 	SEARCH: 'search',

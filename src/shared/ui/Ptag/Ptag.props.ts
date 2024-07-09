@@ -3,5 +3,5 @@ export interface ParagraphProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {
 	children: ReactNode;
 	size: 's' | 'm' | 'l';
-	kind: 'white';
+	kind?: 'white';
 }
