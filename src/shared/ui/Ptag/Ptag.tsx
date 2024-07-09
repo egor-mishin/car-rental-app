@@ -7,6 +7,9 @@ export const P = ({ children, size, kind, ...props }: ParagraphProps) => {
 		<p
 			className={cn(styles.p, {
 				[styles.white]: kind === 'white',
+				[styles.s]: size === 's',
+				[styles.m]: size === 'm',
+				[styles.l]: size === 'l',
 			})}
 			{...props}
 		>

@@ -14,7 +14,7 @@ const meta: Meta<typeof Button> = {
 		appearance: { control: { type: 'select', options: ['primary', 'secondary', 'minimal'] } },
 		title: { control: 'text' },
 		size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-		iconLabel: { control: 'select', options: ['wechat'] },
+		iconSymbol: { control: 'select', options: ['wechat'] },
 		disabled: { control: 'boolean' },
 		kind: { control: { type: 'select', options: ['regular', 'icon-right', 'icon-only'] } },
 		onClick: { action: 'clicked' },
@@ -63,7 +63,7 @@ export const PrimaryWithIcon: Story = {
 		title: 'Label',
 		size: 'medium',
 		kind: 'with-icon',
-		iconLabel: 'wechat',
+		iconSymbol: 'wechat',
 	},
 };
 
@@ -79,7 +79,7 @@ export const PrimaryWithIconOnly: Story = {
 		title: 'Label',
 		size: 'medium',
 		kind: 'icon-only',
-		iconLabel: 'wechat',
+		iconSymbol: 'wechat',
 	},
 };
 
@@ -95,7 +95,7 @@ export const PrimaryWithIconRight: Story = {
 		title: 'Label',
 		size: 'medium',
 		kind: 'with-icon',
-		iconLabel: 'wechat',
+		iconSymbol: 'wechat',
 	},
 };
 
@@ -166,7 +166,7 @@ export const SecondaryMinimalWithIcon: Story = {
 		appearance: 'minimal',
 		title: 'Label',
 		size: 'medium',
-		iconLabel: 'wechat',
+		iconSymbol: 'wechat',
 	},
 };
 
@@ -223,7 +223,7 @@ export const SecondaryMediumWithIcon: Story = {
 		appearance: 'secondary',
 		title: 'Label',
 		size: 'medium',
-		iconLabel: 'wechat',
+		iconSymbol: 'wechat',
 	},
 };
 

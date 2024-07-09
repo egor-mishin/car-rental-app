@@ -17,7 +17,6 @@ export const Card = ({
 	price,
 	slug,
 	period,
-	currency,
 	discount,
 }: CardProps) => {
 	return (

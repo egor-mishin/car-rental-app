@@ -1,4 +1,4 @@
-import { ICar } from '@/shared/interfaces/car.interface';
+import { ICar } from '@/shared/lib/car.interface';
 import { v4 as uuidv4 } from 'uuid';
 
 export const cars: ICar[] = [

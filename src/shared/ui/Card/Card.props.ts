@@ -1,4 +1,4 @@
-import { ISpec } from '@/shared/interfaces/car.interface';
+import { ISpec } from '@/shared/lib/car.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface CardProps

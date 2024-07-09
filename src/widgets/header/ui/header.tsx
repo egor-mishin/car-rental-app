@@ -1,5 +1,5 @@
-import { AuthPanel } from '../';
 import { Logo, SearchInput } from '@/shared/ui';
+import { AuthPanel } from '../';
 import styles from './header.module.scss';
 
 export const Header = () => {

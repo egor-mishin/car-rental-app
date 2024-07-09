@@ -1,11 +1,11 @@
 'use client';
-import { ReactNode, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Star from '../../assets/icons/star.svg';
 import { RatingProps } from './Rating.props';
 import styles from './Rating.module.scss';
 import cn from 'classnames';
 
-export const Rating = ({ rating, isEditable, className, ...props }: RatingProps) => {
+export const Rating = ({ rating, isEditable, ...props }: RatingProps) => {
 	const [ratingArray, setRatingArray] = useState<JSX.Element[]>(Array(5).fill(<></>));
 
 	useEffect(() => {
@@ -13,7 +13,7 @@ export const Rating = ({ rating, isEditable, className, ...props }: RatingProps)
 	}, [rating]);
 
 	const renderRating = (currentRating: number) => {
-		const currentRatingArray = ratingArray.map((rating, i) => (
+		const currentRatingArray = ratingArray.map((_, i) => (
 			<Star
 				onClick={() => {
 					changeRating(i);
@@ -39,7 +39,7 @@ export const Rating = ({ rating, isEditable, className, ...props }: RatingProps)
 
 	return (
 		<div className={styles.rating} {...props}>
-			{ratingArray.map((r, i) => (
+			{ratingArray.map((r) => (
 				<div key={`${r}-star`}>{r}</div>
 			))}
 		</div>

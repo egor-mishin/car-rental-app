@@ -1,8 +1,7 @@
+import { Footer, Header } from '@/widgets';
 import type { Metadata } from 'next';
 import '../../app/styles/main.scss';
 import { plusJakartaSansRegular } from '../../app/ui/fonts';
-import { Footer } from '../footer/ui/footer';
-import { Header } from '../header';
 
 export const metadata: Metadata = {
 	title: 'Car Rental App',

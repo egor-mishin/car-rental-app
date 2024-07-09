@@ -1,7 +1,7 @@
+import styles from './page.module.scss';
 import { Banner } from '@/shared/ui';
 import { banners, cars } from '../../../_data/db';
-import styles from './page.module.scss';
-import { Cards } from '@/widgets/Cards/Cards';
+import { Cards } from '@/widgets';
 export default function Home() {
 	return (
 		<div className="container">

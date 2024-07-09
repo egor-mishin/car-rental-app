@@ -1,11 +1,8 @@
-import { Button } from '@/shared/ui/Button/Button';
+import { Avatar, Button, CustomLink, NotificationIcon } from '@/shared/ui';
 import styles from './authPanel.module.scss';
-import { CustomLink } from '@/shared/ui/Link/CustomLink';
-import { ICONS } from '@/shared/lib/constants';
-import { ROUTES } from '@/shared/lib/routes';
 import { AuthPanelProps } from './authPanel.props';
-import { NotificationIcon } from '@/shared/ui/NotificationsIcon/NotificationIcon';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { ROUTES } from '@/shared/lib/routes';
+import { ICONS } from '@/shared/lib/constants';
 export const AuthPanel = ({ isAuthenticated }: AuthPanelProps) => {
 	if (isAuthenticated) {
 		return (

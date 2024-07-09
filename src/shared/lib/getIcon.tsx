@@ -1,4 +1,4 @@
-import AvatarIcon from '../assets/icons/avatar.svg';
+import AvatarIcon from '@/shared/assets/icons/avatar.svg';
 import Transmission from '../assets/icons/car.svg';
 import GasStation from '../assets/icons/gas-station.svg';
 import LikeIconBlack from '../assets/icons/like-black.svg';

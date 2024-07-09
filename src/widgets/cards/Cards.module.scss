@@ -1,0 +1,11 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 25px;
+}
+
+.cardsTitle {
+	font-size: var(--font-size-md);
+	color: var(--color-secondary-light);
+	margin: 50px 0 30px;
+}
