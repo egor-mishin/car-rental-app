@@ -2,7 +2,8 @@ import { PERIOD } from '@/shared/lib/constants';
 import { Card, Htag } from '@/shared/ui';
 import styles from './Cards.module.scss';
 import { CardsProps } from './Cards.props';
-export const Cards = ({ cars, title }: CardsProps) => {
+import { cars } from '../../../_data/db';
+export const Cards = ({ title }: CardsProps) => {
 	return (
 		<>
 			<Htag tag="h3" className={styles.cardsTitle}>

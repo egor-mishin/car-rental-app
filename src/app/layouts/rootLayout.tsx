@@ -1,5 +1,6 @@
 import { Footer, Header } from '@/widgets';
 import type { Metadata } from 'next';
+import { AppLoader } from '../loaders/app-loader';
 import '../../app/styles/main.scss';
 import { plusJakartaSansRegular } from '../../app/ui/fonts';
 
@@ -16,11 +17,13 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={plusJakartaSansRegular.className}>
-				<Header />
-				<div className="container">
-					<div className="main">{children}</div>
-				</div>
-				<Footer />
+				<AppLoader>
+					<Header />
+					<div className="container">
+						<div className="main">{children}</div>
+					</div>
+					<Footer />
+				</AppLoader>
 			</body>
 		</html>
 	);

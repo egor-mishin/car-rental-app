@@ -11,3 +11,7 @@ export interface ICar {
 	imageUrl: string;
 	discount?: number;
 }
+
+export interface ICarList {
+	cars: ICar[];
+}

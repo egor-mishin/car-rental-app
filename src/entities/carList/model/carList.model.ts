@@ -1,7 +1,16 @@
-import { apiInstance } from '@/shared/api/base';
+import { cars } from './../../../../_data/db';
+import { create } from 'zustand';
+import { ICar } from '../interface/carList.interface';
 
-const BASE_URL = 'cars';
+interface IState {
+	cars: ICar[] | null;
+	setCars: (cars: ICar[]) => void;
+}
 
-export const getBook = (isbn13: string): Promise<IBookDescription> => {
-	return apiInstance.get(`${BASE_URL}/${isbn13}`);
-};
+export const createCarsStore = (cars: ICar[]) =>
+	create<IState>((set, get) => ({
+		cars,
+		setCars: (cars) => {
+			set({ cars });
+		},
+	}));

@@ -1,8 +1,11 @@
-import styles from './page.module.scss';
+'use client';
 import { Banner } from '@/shared/ui';
-import { banners, cars } from '../../../_data/db';
 import { Cards } from '@/widgets';
+import { banners } from '../../../_data/db';
+import { useCarsStore } from '../../app/providers/cars-provider';
+import styles from './page.module.scss';
 export default function Home() {
+	const cars = useCarsStore()((state) => state.cars);
 	return (
 		<div className="container">
 			<section className={styles.banners}>
