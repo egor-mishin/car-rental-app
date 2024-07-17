@@ -1,28 +1,33 @@
 'use client';
 import { combineProviders } from '@/app/providers';
+import { getBanners } from '@/entities/banner/api/banners.api';
 import { getCars } from '@/entities/carList/api/carList.api';
-import { ICarList } from '@/entities/carList/model';
 import { ReactNode, useEffect, useState } from 'react';
+import BannersProvider from '../providers/banners-provider';
 import CarsProvider from '../providers/cars-provider';
+import { IBanner } from '@/entities/banner/model/banner.interface';
+import { ICar } from '@/entities/carList/model';
 
 export const AppLoader = ({ children }: { children: ReactNode }) => {
-	const [localData, setLocalData] = useState<ICarList | null>(null);
+	const [localData, setLocalData] = useState<{ banners: IBanner[]; cars: ICar[] } | null>(null);
+	const isData = localData?.banners;
 	useEffect(() => {
 		loadAppData();
 	}, []);
 
 	const loadAppData = async () => {
-		const [ApiData] = await Promise.all([getCars()]);
-		setLocalData(ApiData);
+		const [cars, banners] = await Promise.all([getCars(), getBanners()]);
+		setLocalData({ cars, banners });
 	};
-
-	const isData = localData?.cars;
 
 	if (!isData) {
 		return;
 	}
 
-	const AllProviders = combineProviders([[CarsProvider, localData || []]]);
+	const AllProviders = combineProviders([
+		[CarsProvider, localData?.cars || []],
+		[BannersProvider, localData?.banners || []],
+	]);
 
 	return <AllProviders>{children}</AllProviders>;
 };

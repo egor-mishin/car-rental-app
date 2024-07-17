@@ -1,11 +1,11 @@
 'use client';
 import { Banner } from '@/shared/ui';
 import { Cards } from '@/widgets';
-import { banners } from '../../../_data/db';
 import styles from './page.module.scss';
-import { useCarsStore } from '@/app/providers';
+import { useBannersStore, useCarsStore } from '@/app/providers';
 export default function Home() {
 	const cars = useCarsStore()((state) => state.cars);
+	const banners = useBannersStore()((state) => state.banners);
 	return (
 		<div className="container">
 			<section className={styles.banners}>

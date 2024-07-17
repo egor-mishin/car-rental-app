@@ -3,7 +3,7 @@ import { prisma } from './../../../src/shared/lib/prisma';
 
 export async function GET() {
 	try {
-		const banners = await prisma.banners.findMany({});
+		const banners = await prisma.banner.findMany({});
 		return NextResponse.json({
 			banners,
 		});
