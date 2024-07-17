@@ -1,4 +1,4 @@
-import { ISpec } from '@/shared/lib/car.interface';
+import { ISpec } from '@/entities/carList/model/carList.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface CardProps
@@ -6,7 +6,7 @@ export interface CardProps
 	title: string;
 	subtitle: string;
 	imageUrl: string;
-	specs: ISpec[];
+	specs: ISpec;
 	price: number;
 	discount?: number;
 	slug: string;

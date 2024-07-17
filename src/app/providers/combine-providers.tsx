@@ -1,4 +1,4 @@
-import { ComponentProps, ComponentType, FC, ReactNode } from 'react';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
 type Providers = [ComponentType<any>, ComponentProps<any>?][];
 export const combineProviders = (providers: Providers) =>

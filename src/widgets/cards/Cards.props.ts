@@ -1,4 +1,4 @@
-import { ICar } from '@/entities/carList/interface/carList.interface';
+import { ICar } from '@/entities/carList/model';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface CardsProps

@@ -1,5 +1,5 @@
 import { apiInstance } from '@/shared/api/base';
-import { ICarList } from '../interface/carList.interface';
+import { ICarList } from '../model/carList.interface';
 
 const BASE_URL = 'cars';
 

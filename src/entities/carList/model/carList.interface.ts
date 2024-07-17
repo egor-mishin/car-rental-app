@@ -1,5 +1,7 @@
 export interface ISpec {
-	[key: string]: string | number;
+	gas: string;
+	transmission: string;
+	capacity: string;
 }
 export interface ICar {
 	id: string;
@@ -7,7 +9,7 @@ export interface ICar {
 	type: string;
 	price: number;
 	currency?: string;
-	specs: ISpec[];
+	specs: ISpec;
 	imageUrl: string;
 	discount?: number;
 }

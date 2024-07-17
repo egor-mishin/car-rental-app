@@ -19,6 +19,8 @@ export const Card = ({
 	period,
 	discount,
 }: CardProps) => {
+	const specsArray = specs && Object.entries(specs);
+
 	return (
 		<div className={styles.card}>
 			<div className={styles.header}>
@@ -32,13 +34,9 @@ export const Card = ({
 				<CldImage src={imageUrl} alt={title} fill />
 			</div>
 			<div className={styles.spec}>
-				{specs &&
-					specs.map((spec) => (
-						<Item
-							title={Object.values(spec).toString()}
-							iconSymbol={Object.keys(spec).toString()}
-						/>
-					))}
+				{specsArray?.map((spec) => (
+					<Item title={spec[1].toString()} iconSymbol={spec[0]} />
+				))}
 			</div>
 			<div className={styles.footer}>
 				<Price price={price} period={period} currency={CURRENCY.USD} discount={discount} />

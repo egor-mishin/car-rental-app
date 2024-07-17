@@ -2,14 +2,14 @@
 import { Banner } from '@/shared/ui';
 import { Cards } from '@/widgets';
 import { banners } from '../../../_data/db';
-import { useCarsStore } from '../../app/providers/cars-provider';
 import styles from './page.module.scss';
+import { useCarsStore } from '@/app/providers';
 export default function Home() {
 	const cars = useCarsStore()((state) => state.cars);
 	return (
 		<div className="container">
 			<section className={styles.banners}>
-				{banners.map((b) => (
+				{banners?.map((b) => (
 					<Banner {...b} />
 				))}
 			</section>

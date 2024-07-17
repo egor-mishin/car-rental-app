@@ -3,13 +3,9 @@ import { prisma } from './../../../src/shared/lib/prisma';
 
 export async function GET() {
 	try {
-		const cars = await prisma.car.findMany({
-			include: {
-				spec: true,
-			},
-		});
+		const banners = await prisma.banners.findMany({});
 		return NextResponse.json({
-			cars,
+			banners,
 		});
 	} catch (error) {
 		if (error instanceof Error) {

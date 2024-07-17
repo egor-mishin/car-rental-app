@@ -1,7 +1,7 @@
 'use client';
-import { ICar } from '@/entities/carList/interface/carList.interface';
+import { ICar } from '@/entities/carList/model';
 import { createCarsStore } from '@/entities/carList/model/carList.model';
-import { createContext, useContext, useState } from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 const CarsContext = createContext<ReturnType<typeof createCarsStore> | null>(null);
 
@@ -10,7 +10,7 @@ export const useCarsStore = () => {
 	return useContext(CarsContext)!;
 };
 
-const CarsProvider = ({ cars, children }: { cars: ICar[]; children: React.ReactNode }) => {
+const CarsProvider = ({ cars, children }: { cars: ICar[]; children: ReactNode }) => {
 	const [store] = useState(() => createCarsStore(cars));
 	return <CarsContext.Provider value={store}>{children}</CarsContext.Provider>;
 };

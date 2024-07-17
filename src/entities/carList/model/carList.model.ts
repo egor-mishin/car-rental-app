@@ -1,6 +1,5 @@
-import { cars } from './../../../../_data/db';
 import { create } from 'zustand';
-import { ICar } from '../interface/carList.interface';
+import { ICar } from './carList.interface';
 
 interface IState {
 	cars: ICar[] | null;
