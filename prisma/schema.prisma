@@ -32,3 +32,9 @@ model Banner {
    imageUrl String
    bgImageUrl String?
 }
+
+model User {
+  id       String  @id @default(uuid())
+  email    String  @unique
+  password String
+}

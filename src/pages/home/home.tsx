@@ -1,5 +1,5 @@
 'use client';
-import { Banner } from '@/shared/ui';
+import { Banner, TextInput } from '@/shared/ui';
 import { Cards } from '@/widgets';
 import styles from './page.module.scss';
 import { useBannersStore, useCarsStore } from '@/app/providers';
@@ -8,7 +8,9 @@ export default function Home() {
 	const banners = useBannersStore()((state) => state.banners);
 	return (
 		<div className="container">
-			<section className={styles.banners}>
+			<TextInput placeholder="Enter Your name" label="Name" />
+
+			{/* <section className={styles.banners}>
 				{banners?.map((b) => (
 					<Banner {...b} />
 				))}
@@ -17,7 +19,7 @@ export default function Home() {
 			<section className={styles.cards}>
 				<Cards cars={cars} title="Popular Cars" />
 				<Cards cars={cars} title="Recommendation Cars" />
-			</section>
+			</section> */}
 		</div>
 	);
 }
