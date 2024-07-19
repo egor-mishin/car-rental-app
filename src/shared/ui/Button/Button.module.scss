@@ -19,7 +19,6 @@
 
 .small {
 	font-size: var(--font-size-xs);
-	min-width: 90px;
 
 	svg {
 		max-width: 12px;
@@ -29,7 +28,6 @@
 
 .medium {
 	font-size: var(--font-size-sm);
-	min-width: 100px;
 
 	svg {
 		max-width: 14px;
@@ -38,7 +36,6 @@
 }
 
 .large {
-	min-width: 120px;
 	font-size: var(--font-size-lg);
 
 	svg {

@@ -1,28 +1,37 @@
-import { Avatar, Button, CustomLink, NotificationIcon } from '@/shared/ui';
+'use client';
+import useModal from '@/shared/hooks/useModal';
+import { ICONS } from '@/shared/lib/constants';
+import { ROUTES } from '@/shared/lib/routes';
+import { Avatar, Button, CustomLink, Modal, NotificationIcon } from '@/shared/ui';
 import styles from './authPanel.module.scss';
 import { AuthPanelProps } from './authPanel.props';
-import { ROUTES } from '@/shared/lib/routes';
-import { ICONS } from '@/shared/lib/constants';
+import { LoginForm } from '@/widgets';
 export const AuthPanel = ({ isAuthenticated }: AuthPanelProps) => {
-	if (isAuthenticated) {
+	if (!isAuthenticated) {
+		const { isOpen, toggleModal } = useModal();
 		return (
-			<div className={styles.authPanel}>
-				<Button
-					title="Sign in"
-					route={ROUTES.LOGIN}
-					appearance="primary"
-					kind="regular"
-					size="large"
-				/>
-				<span className={styles.text}>or</span>
-				<Button
-					title="Register"
-					route={ROUTES.REGISTER}
-					appearance="secondary"
-					kind="regular"
-					size="large"
-				/>
-			</div>
+			<>
+				<Modal isOpen={isOpen} toggleModal={toggleModal}>
+					<LoginForm />
+				</Modal>
+				<div className={styles.authPanel}>
+					<Button
+						title="Sign in"
+						appearance="primary"
+						kind="regular"
+						size="small"
+						onClick={() => toggleModal()}
+					/>
+					<span className={styles.text}>or</span>
+					<Button
+						title="Register"
+						route={ROUTES.REGISTER}
+						appearance="secondary"
+						kind="regular"
+						size="small"
+					/>
+				</div>
+			</>
 		);
 	}
 	return (

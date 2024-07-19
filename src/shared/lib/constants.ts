@@ -22,4 +22,5 @@ export const ICONS = {
 	SETTINGS: 'settings',
 	NOTIFICATION: 'notification',
 	AVATAR: 'avatar',
+	CLOSE: 'close',
 };

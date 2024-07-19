@@ -12,3 +12,4 @@ export { Price } from '../ui/Price/Price';
 export { P } from '../ui/Ptag/Ptag';
 export { Rating } from '../ui/Rating/Rating';
 export { SearchInput, TextInput } from './inputs';
+export { Modal } from './Modal/Modal';
