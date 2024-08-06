@@ -5,10 +5,10 @@ import { ROUTES } from '@/shared/lib/routes';
 import { Avatar, Button, CustomLink, Modal, NotificationIcon } from '@/shared/ui';
 import styles from './authPanel.module.scss';
 import { AuthPanelProps } from './authPanel.props';
-import { LoginForm } from '@/widgets';
+import { LoginForm } from '@/features';
 export const AuthPanel = ({ isAuthenticated }: AuthPanelProps) => {
+	const { isOpen, toggleModal } = useModal();
 	if (!isAuthenticated) {
-		const { isOpen, toggleModal } = useModal();
 		return (
 			<>
 				<Modal isOpen={isOpen} toggleModal={toggleModal}>
@@ -24,8 +24,8 @@ export const AuthPanel = ({ isAuthenticated }: AuthPanelProps) => {
 					/>
 					<span className={styles.text}>or</span>
 					<Button
-						title="Register"
-						route={ROUTES.REGISTER}
+						title="Sign up"
+						route={ROUTES.SIGNUP}
 						appearance="secondary"
 						kind="regular"
 						size="small"

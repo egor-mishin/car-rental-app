@@ -1,8 +1,9 @@
 import cn from 'classnames';
 import styles from './Modal.module.scss';
-import { getIcon } from '@/shared/lib/getIcon';
+import { getIcon } from '@/shared/lib//helpers/getIcon';
 import { ICONS } from '@/shared/lib/constants';
-export const Modal = ({ children, isOpen, toggleModal }) => {
+import { ModalProps } from './Modal.props';
+export const Modal = ({ children, isOpen, toggleModal }: ModalProps) => {
 	const icon = getIcon(ICONS.CLOSE);
 	return (
 		<div

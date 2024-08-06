@@ -24,3 +24,14 @@ export const ICONS = {
 	AVATAR: 'avatar',
 	CLOSE: 'close',
 };
+
+export const ERRORS = {
+	EMAIL_NOT_VALID: 'Please enter a valid email address.',
+	FIELD_REQUIRED: 'Field is required.',
+	NAME_REQUIRED: 'Please enter your name.',
+	PASSWORD_REQUIRED: 'Please enter a password.',
+	MESSAGE_TOO_LONG: 'Your message is too long.',
+	NAME_TOO_LONG: 'Your name is too long.',
+	EMAIL_TOO_LONG: 'Your email address is too long.',
+	INVALID_REQUEST: 'Invalid request',
+};

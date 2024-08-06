@@ -1,6 +1,7 @@
 export { Avatar } from '../ui/Avatar/Avatar';
 export { Banner } from '../ui/Banner/Banner';
 export { Button } from '../ui/Button/Button';
+export { ButtonSubmit } from '../ui/ButtonSubmit/ButtonSubmit';
 export { Card } from '../ui/Card/Card';
 export { FavButton } from '../ui/FavButton/FavButton';
 export { Htag } from '../ui/Htag/Htag';
@@ -13,3 +14,5 @@ export { P } from '../ui/Ptag/Ptag';
 export { Rating } from '../ui/Rating/Rating';
 export { SearchInput, TextInput } from './inputs';
 export { Modal } from './Modal/Modal';
+export { Toast } from './Toast/Toast';
+export { ErrorNotification } from './ErrorNotification/ErrorNotification';

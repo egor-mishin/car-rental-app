@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { CustomLinkProps } from './CustomLink.props';
-import { getIcon } from '@/shared/lib/getIcon';
+import { getIcon } from '@/shared/lib/helpers/getIcon';
 import styles from './CustomLink.module.scss';
 import cn from 'classnames';
 

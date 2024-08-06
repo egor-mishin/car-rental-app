@@ -1,5 +1,5 @@
 import { ICONS } from '@/shared/lib/constants';
-import { getIcon } from '@/shared/lib/getIcon';
+import { getIcon } from '@/shared/lib/helpers/getIcon';
 import Image from 'next/image';
 import styles from './Avatar.module.scss';
 

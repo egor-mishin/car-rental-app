@@ -1,6 +1,6 @@
 import { ComponentProps, ComponentType, ReactNode } from 'react';
 
-type Providers = [ComponentType<any>, ComponentProps<any>?][];
+type Providers = [ComponentType<unknown>, ComponentProps<any>?][];
 export const combineProviders = (providers: Providers) =>
 	providers.reduce(
 		(AccumulatedProviders: any, [Provider, props = {}]) =>

@@ -1,14 +1,14 @@
 import AvatarIcon from '@/shared/assets/icons/avatar.svg';
-import Transmission from '../assets/icons/car.svg';
-import GasStation from '../assets/icons/gas-station.svg';
-import LikeIconBlack from '../assets/icons/like-black.svg';
-import LikeIcon from '../assets/icons/like.svg';
-import NotificationIcon from '../assets/icons/notification-icon.svg';
-import Capacity from '../assets/icons/profile-2user.svg';
-import SearchIcon from '../assets/icons/search-icon.svg';
-import SettingsIcon from '../assets/icons/settings-icon.svg';
-import CloseIcon from '../assets/icons/close.svg';
-import { ICONS } from './constants';
+import Transmission from '@/shared/assets/icons/car.svg';
+import GasStation from '@/shared/assets/icons/gas-station.svg';
+import LikeIconBlack from '@/shared/assets/icons/like-black.svg';
+import LikeIcon from '@/shared/assets/icons/like.svg';
+import NotificationIcon from '@/shared/assets/icons/notification-icon.svg';
+import Capacity from '@/shared/assets/icons/profile-2user.svg';
+import SearchIcon from '@/shared/assets/icons/search-icon.svg';
+import SettingsIcon from '@/shared/assets/icons/settings-icon.svg';
+import CloseIcon from '@/shared/assets/icons/close.svg';
+import { ICONS } from '@/shared/lib/constants';
 
 export const getIcon = (iconSymbol?: string) => {
 	switch (iconSymbol) {

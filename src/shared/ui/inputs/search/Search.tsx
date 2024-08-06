@@ -1,4 +1,4 @@
-import { getIcon } from '@/shared/lib/getIcon';
+import { getIcon } from '@/shared/lib/helpers/getIcon';
 import { SearchInputProps } from './Search.props';
 import { ICONS } from '@/shared/lib/constants';
 import styles from './Search.module.scss';

@@ -2,7 +2,7 @@
 import cn from 'classnames';
 import styles from './Button.module.scss';
 import { ButtonProps } from './Button.props';
-import { getIcon } from '@/shared/lib/getIcon';
+import { getIcon } from '@/shared/lib/helpers/getIcon';
 import Link from 'next/link';
 
 export const Button = ({
